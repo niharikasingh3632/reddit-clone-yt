@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 import { Button, Flex, Text } from "@chakra-ui/react";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { ModalView } from "../../../atoms/authModalAtom";
 import { auth } from "../../../firebase/clientApp";
 import { FIREBASE_ERRORS } from "../../../firebase/errors";
 import InputItem from "../../Layout/InputItem";
+import { error } from "console";
 
 type SignUpProps = {
   toggleView: (view: ModalView) => void;
@@ -27,9 +28,15 @@ const SignUp: React.FC<SignUpProps> = ({ toggleView }) => {
       return setFormError("Please enter a valid email");
     }
 
+    if ( form.password.length < 8 )
+    {
+      return setFormError( "Password is less than 8 characters" );
+    }
+
     if (form.password !== form.confirmPassword) {
       return setFormError("Passwords do not match");
     }
+
 
     // Valid form inputs
     createUserWithEmailAndPassword(form.email, form.password);
@@ -50,7 +57,7 @@ const SignUp: React.FC<SignUpProps> = ({ toggleView }) => {
         name="email"
         placeholder="email"
         type="text"
-        mb={2}
+        mb = {2}
         onChange={onChange}
       />
       <InputItem

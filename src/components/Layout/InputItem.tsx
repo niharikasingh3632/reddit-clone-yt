@@ -10,6 +10,7 @@ type InputItemProps = {
   mb?: number;
   bg?: string;
   size?: string;
+  mr?: number;
 };
 
 const InputItem: React.FC<InputItemProps> = ({
@@ -20,6 +21,7 @@ const InputItem: React.FC<InputItemProps> = ({
   onChange,
   mb,
   bg,
+  mr,
   size,
 }) => {
   return (
@@ -29,7 +31,8 @@ const InputItem: React.FC<InputItemProps> = ({
       value={value}
       required
       onChange={onChange}
-      mb={mb}
+      mb={ mb }
+      mr = {mr}
       fontSize="10pt"
       _placeholder={{ color: "gray.500" }}
       _hover={{

@@ -65,7 +65,7 @@ const AuthModal: React.FC<AuthModalProps> = () => {
           direction="column"
           alignItems="center"
           justifyContent="center"
-          width="70%"
+          width="100%"
         >
           {modalState.view === "login" || modalState.view === "signup" ? (
             <>

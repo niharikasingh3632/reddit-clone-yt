@@ -67,10 +67,10 @@ const Recommendations: React.FC<RecommendationsProps> = () => {
         height="70px"
         borderRadius="4px 4px 0px 0px"
         fontWeight={600}
-        bgImage="url(/images/recCommsArt.png)"
+        bgImage="url('images/navX.svg')"
         backgroundSize="cover"
-        bgGradient="linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)),
-        url('images/recCommsArt.png')"
+        bgGradient="linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25)),
+        url(images/navX.svg)"
       >
         Top Communities
       </Flex>
@@ -121,9 +121,9 @@ const Recommendations: React.FC<RecommendationsProps> = () => {
                           />
                         ) : (
                           <Icon
-                            as={FaReddit}
+            
                             fontSize={30}
-                            color="brand.100"
+                            color="blue.600"
                             mr={2}
                           />
                         )}

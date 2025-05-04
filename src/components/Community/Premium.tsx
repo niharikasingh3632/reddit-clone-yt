@@ -14,13 +14,13 @@ const Premium: React.FC = () => {
       borderColor="gray.300"
     >
       <Flex mb={2}>
-        <Icon as={GiCheckedShield} fontSize={26} color="brand.100" mt={2} />
+        <Icon as={ GiCheckedShield } fontSize={ 26 } color="blue.500" mt={2} />
         <Stack spacing={1} fontSize="9pt" pl={2}>
-          <Text fontWeight={600}>Reddit Premium</Text>
-          <Text>The best Reddit experience, with monthly Coins</Text>
+          <Text fontWeight={600}>navX Premium</Text>
+          <Text>The best navX experience, with monthly Coins</Text>
         </Stack>
       </Flex>
-      <Button height="30px" bg="brand.100">
+      <Button height="30px" bg="blue.500">
         Try Now
       </Button>
     </Flex>
